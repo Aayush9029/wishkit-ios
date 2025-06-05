@@ -18,55 +18,13 @@ In-App Feature Requests made easy with complete control over the implementation.
 
 
 ## Index
-- [Setup (UIKit)](#uikit)
-- [Setup (SwiftUI)](#swiftui)
+- [Setup](#setup)
+- [Configuration](#configuration)
 - [Theming](#theming)
 - [User Segmentation](#user-segmentation)
-- [Control UI Elements](#ui-elements)
 - [Localization](#localization)
 
-# UIKit
-
-## 1. Add WishKit (v4.7.0) as a dependency in Xcode.
-```
-https://github.com/Aayush9029/wishkit-ios.git
-```
-
-## 2. Configure WishKit with your API Key.
-###### You can find your API key in your admin dashboard.
-```swift
-import UIKit
-import WishKit
-
-@main
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-	WishKit.configure(with: "your_api_key")
-        return true
-    }
-    
-    ...
-}
-```
-
-## 3. Now you can present the WishKit viewController.
-```swift
-import UIKit
-import WishKit
-
-class HomeViewController: UIViewController {
-    ...
-  
-    @objc func buttonTapped() {
-        present(WishKit.viewController.withNavigation(), animated: true)  
-    }
-}
-```
-###### NOTE: If you are pushing the `WishKit.viewController`, you won't need to call `withNavigation()`.
----
-
-# SwiftUI
+# Setup
 
 ## 1. Add WishKit (v4.7.0) as a dependency in Xcode.
 ```
@@ -110,7 +68,7 @@ struct ContentView: View {
 ---
 
 # Configuration
-#### You can configure a lof of WishKit's UI elements.
+#### You can configure a lot of WishKit's UI elements.
 
 ```swift
 // Allow user to undo their vote
@@ -189,15 +147,22 @@ WishKit.updateUser(customID: "8AHD1IL03ACIP")
 ---
 
 # Localization
-#### Localize any text used by WishKit by overriding default values.
+#### WishKit comes with built-in English and Arabic localizations. You can override any text by modifying the localization properties.
 
 ```swift
-// Override the segmented control text to the german word for "Requested".
+// Override any of the 40+ available localization strings
 WishKit.config.localization.requested = "Angefragt"
+WishKit.config.localization.createWish = "Neue Idee"
 
-// You can also assign NSLocalizedString.
+// You can also use NSLocalizedString for dynamic localization
 WishKit.config.localization.cancel = NSLocalizedString("general.cancel", comment: "")
 ```
+
+Available localization properties include:
+- Status states: `requested`, `pending`, `approved`, `implemented`, `inReview`, `planned`, `inProgress`, `completed`
+- UI elements: `save`, `upvote`, `votes`, `comments`, `createWish`
+- Messages: `youCanOnlyVoteOnce`, `youCanNotVoteForYourOwnWish`, `noFeatureRequests`
+- And many more...
 
 ### **Platforms**
 
