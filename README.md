@@ -16,7 +16,6 @@ This is a custom fork of WishKit for full customizability. <br/>
 In-App Feature Requests made easy with complete control over the implementation. <br/>
 </p>
 
-<img src="Resources/banner-min.png" />
 
 ## Index
 - [Setup (UIKit)](#uikit)
