@@ -1,5 +1,5 @@
-<h1 align="center"> <a href="https://www.wishkit.io/?ref=github">wishkit.io</a></h1>
-<h4 align="center"> In-App Feature Requests. Made Easy. </h2>
+<h1 align="center">WishKit iOS - Custom Fork</h1>
+<h4 align="center">A customized fork of WishKit by <a href="https://github.com/Aayush9029">Aayush Pokharel</a></h4>
 <p align="center">
 	<a href="LICENSE">
         	<img src="https://img.shields.io/badge/License-MIT-00c573.svg" alt="MIT License">
@@ -7,12 +7,13 @@
 	<a href="https://swift.org">
         	<img src="https://img.shields.io/badge/Swift-5.6-00c573.svg" alt="Swift 5.6">
 	</a>
-	<a href="https://twitter.com/mywishkit" target="_blank">
-        	<img src="https://img.shields.io/badge/Twitter-@mywishkit-00c573.svg" alt="Twitter">
+	<a href="https://x.com/aayushbuilds" target="_blank">
+        	<img src="https://img.shields.io/badge/Twitter-@aayushbuilds-00c573.svg" alt="Twitter">
 	</a>
 </p>
 <p align="center">
-WishKit allows your users to request and vote on features in your app that <b>just works ✨</b> <br/>
+This is a custom fork of WishKit for full customizability. <br/>
+In-App Feature Requests made easy with complete control over the implementation. <br/>
 </p>
 
 <img src="Resources/banner-min.png" />
@@ -29,11 +30,11 @@ WishKit allows your users to request and vote on features in your app that <b>ju
 
 ## 1. Add WishKit (v4.7.0) as a dependency in Xcode.
 ```
-https://github.com/wishkit/wishkit-ios.git
+https://github.com/Aayush9029/wishkit-ios.git
 ```
 
 ## 2. Configure WishKit with your API Key.
-###### You can find your API key in your admin dashboard on <a href="https://wishkit.io" target="_blank">wishkit.io</a>.
+###### You can find your API key in your admin dashboard.
 ```swift
 import UIKit
 import WishKit
@@ -70,11 +71,11 @@ class HomeViewController: UIViewController {
 
 ## 1. Add WishKit (v4.7.0) as a dependency in Xcode.
 ```
-https://github.com/wishkit/wishkit-ios.git
+https://github.com/Aayush9029/wishkit-ios.git
 ```
 
 ## 2. Configure WishKit with your API Key in the first view.
-###### You can find your API key in your admin dashboard on <a href="https://wishkit.io" target="_blank">wishkit.io</a>.
+###### You can find your API key in your admin dashboard.
 ```swift
 import SwiftUI
 import WishKit
@@ -206,5 +207,6 @@ WishKit.config.localization.cancel = NSLocalizedString("general.cancel", comment
 
 ---
 
-### **Example Project**
-Checkout the [example project](https://github.com/wishkit/wishkit-ios-example) to see how easy it is to set up a wishlist!
+### **About This Fork**
+This is a custom fork of the original WishKit iOS SDK by [Aayush Pokharel](https://github.com/Aayush9029). 
+The fork was created to enable full customizability and control over the implementation details.
